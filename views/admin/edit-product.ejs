@@ -1,0 +1,34 @@
+<%- include('../includes/start') %>
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+<%- include('../includes/navigation') %>
+    <main>
+        <% if(errorMessage) {%>
+            <div class="user-message user-message--error"><%= errorMessage %></div>
+        <% } %> 
+        <form class="product-form" action="<% if(edit){ %>/admin/edit-product <% } else{%> /admin/add-product <% }%>" method="POST" enctype="multipart/form-data">
+        <div class="form-control">
+            <label for="title">Title</label>
+            <input class="<%= validationError.find(e => e.param==='title') ? 'invalid' : '' %>" type='text' name='title' id="title" value="<% if(edit|| hasError){ %><%= product.title %><% } %>" required>
+        </div>
+        <div class="form-control">
+            <label for="image">Image</label>
+            <input class="<%= validationError.find(e => e.param==='image') ? 'invalid' : '' %>" type='file' name='image' id="image">
+        </div>
+        <div class="form-control">
+            <label for="price">Price</label>
+            <input class="<%= validationError.find(e => e.param==='price') ? 'invalid' : '' %>" type='number' name='price' id="price" value="<% if(edit||hasError){ %><%=product.price%><%}%>" required>
+        </div>
+        <div class="form-control">
+            <label for="description">Description</label>
+            <textarea  class="<%= validationError.find(e => e.param==='description') ? 'invalid' : '' %>" id="description" name='description' rows="5"required><% if(edit || hasError){ %><%=product.description%><% } %></textarea>
+        </div>
+        <% if(edit){ %>
+            <input type="hidden" name="id" value="<%= product._id%>">
+        <% } %>    
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+        <button type="submit" class="btn"><% if(edit){ %>Edit Product <% } else{%> Add Product <% }%></button>
+    </form>
+    </main>    
+<%- include('../includes/end') %>

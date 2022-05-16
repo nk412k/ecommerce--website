@@ -1,0 +1,44 @@
+{
+  "name": "express-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "engines":{
+    "node":"16.13.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "MONGO_USER=Nokhalal MONGO_PASSWORD=Nokhalal MONGO_DATABASE=shop STRIPE_PRKEY=sk_test_51Kzx05SJeh87e3cYxEmcKXxn9iH6Si8tTvBnO1xJ5tCrtYBAUP0wNir6tsBtAoCz4jEKeDv3VHnOTiUe8hnQeCf800dJr8zopf STRIPE_PUKEY=pk_test_51Kzx05SJeh87e3cYPeTWdM6zQOSHiEFkQVa0NbZsVfBmsdl49wPNMVOeWkJyKzJPXgNPqvCohqzbF1ORq8hySnsF009cDlvcdg node app.js",
+    "start:dev":"nodemon app.js"
+  },
+  "author": "Nokhalal Mahato",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
+    "connect-flash": "^0.1.1",
+    "connect-mongodb-session": "^3.1.1",
+    "csurf": "^1.11.0",
+    "ejs": "^3.1.7",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.5",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.14.0",
+    "helmet": "^5.0.2",
+    "install": "^0.13.0",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.3.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4",
+    "mysql2": "^2.3.3",
+    "nodemailer": "^6.7.5",
+    "npm": "^8.10.0",
+    "pdfkit": "^0.13.0",
+    "pug": "^3.0.2",
+    "sequelize": "^6.19.0",
+    "stripe": "^9.1.0"
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "env":{
+        "MONGO_USER":"Nokhalal",
+        "MONGO_PASSWORD":"Nokhalal",
+        "MONGO_DATABASE":"shop",
+        "STRIPE_PRKEY":"sk_test_51Kzx05SJeh87e3cYxEmcKXxn9iH6Si8tTvBnO1xJ5tCrtYBAUP0wNir6tsBtAoCz4jEKeDv3VHnOTiUe8hnQeCf800dJr8zopf",
+        "STRIPE_PUKEY":"pk_test_51Kzx05SJeh87e3cYPeTWdM6zQOSHiEFkQVa0NbZsVfBmsdl49wPNMVOeWkJyKzJPXgNPqvCohqzbF1ORq8hySnsF009cDlvcdg"
+    }
+}
